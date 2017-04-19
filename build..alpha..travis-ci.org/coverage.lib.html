@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-basic-auth/basic-auth/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-basic-auth/node_modules/basic-auth/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-basic-auth">npmtest-basic-auth (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-basic-auth/basic-auth/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-basic-auth/node_modules/basic-auth/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">30% <small>(9 / 30)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-basic-auth/basic-auth/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-basic-auth/node_modules/basic-auth/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -514,20 +516,20 @@ var USER_PASS_REGEXP = /^([^:]*):(.*)$/
  * @public
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function auth (req) {</span>
-<span class="cstat-no" title="statement not covered">  if (!req) {</span>
-<span class="cstat-no" title="statement not covered">    throw new TypeError('argument req is required')</span>
+<span class="fstat-no" title="function not covered" >function auth (req) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!req) {</span>
+<span class="cstat-no" title="statement not covered" >    throw new TypeError('argument req is required')</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof req !== 'object') {</span>
-<span class="cstat-no" title="statement not covered">    throw new TypeError('argument req is required to be an object')</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof req !== 'object') {</span>
+<span class="cstat-no" title="statement not covered" >    throw new TypeError('argument req is required to be an object')</span>
   }
 &nbsp;
   // get header
-<span class="cstat-no" title="statement not covered">  var header = getAuthorization(req.req || req)</span>
+<span class="cstat-no" title="statement not covered" >  var header = getAuthorization(req.req || req)</span>
 &nbsp;
   // parse header
-<span class="cstat-no" title="statement not covered">  return parse(header)</span>
+<span class="cstat-no" title="statement not covered" >  return parse(header)</span>
 }
 &nbsp;
 /**
@@ -535,8 +537,8 @@ var USER_PASS_REGEXP = /^([^:]*):(.*)$/
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function decodeBase64 (str) {</span>
-<span class="cstat-no" title="statement not covered">  return new Buffer(str, 'base64').toString()</span>
+<span class="fstat-no" title="function not covered" >function decodeBase64 (str) {</span>
+<span class="cstat-no" title="statement not covered" >  return new Buffer(str, 'base64').toString()</span>
 }
 &nbsp;
 /**
@@ -544,12 +546,12 @@ var USER_PASS_REGEXP = /^([^:]*):(.*)$/
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function getAuthorization (req) {</span>
-<span class="cstat-no" title="statement not covered">  if (!req.headers || typeof req.headers !== 'object') {</span>
-<span class="cstat-no" title="statement not covered">    throw new TypeError('argument req is required to have headers property')</span>
+<span class="fstat-no" title="function not covered" >function getAuthorization (req) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!req.headers || typeof req.headers !== 'object') {</span>
+<span class="cstat-no" title="statement not covered" >    throw new TypeError('argument req is required to have headers property')</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return req.headers.authorization</span>
+<span class="cstat-no" title="statement not covered" >  return req.headers.authorization</span>
 }
 &nbsp;
 /**
@@ -560,27 +562,27 @@ var USER_PASS_REGEXP = /^([^:]*):(.*)$/
  * @public
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function parse (string) {</span>
-<span class="cstat-no" title="statement not covered">  if (typeof string !== 'string') {</span>
-<span class="cstat-no" title="statement not covered">    return undefined</span>
+<span class="fstat-no" title="function not covered" >function parse (string) {</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof string !== 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    return undefined</span>
   }
 &nbsp;
   // parse header
-<span class="cstat-no" title="statement not covered">  var match = CREDENTIALS_REGEXP.exec(string)</span>
+<span class="cstat-no" title="statement not covered" >  var match = CREDENTIALS_REGEXP.exec(string)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!match) {</span>
-<span class="cstat-no" title="statement not covered">    return undefined</span>
+<span class="cstat-no" title="statement not covered" >  if (!match) {</span>
+<span class="cstat-no" title="statement not covered" >    return undefined</span>
   }
 &nbsp;
   // decode user pass
-<span class="cstat-no" title="statement not covered">  var userPass = USER_PASS_REGEXP.exec(decodeBase64(match[1]))</span>
+<span class="cstat-no" title="statement not covered" >  var userPass = USER_PASS_REGEXP.exec(decodeBase64(match[1]))</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!userPass) {</span>
-<span class="cstat-no" title="statement not covered">    return undefined</span>
+<span class="cstat-no" title="statement not covered" >  if (!userPass) {</span>
+<span class="cstat-no" title="statement not covered" >    return undefined</span>
   }
 &nbsp;
   // return credentials object
-<span class="cstat-no" title="statement not covered">  return new Credentials(userPass[1], userPass[2])</span>
+<span class="cstat-no" title="statement not covered" >  return new Credentials(userPass[1], userPass[2])</span>
 }
 &nbsp;
 /**
@@ -588,17 +590,16 @@ var USER_PASS_REGEXP = /^([^:]*):(.*)$/
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function Credentials (name, pass) {</span>
-<span class="cstat-no" title="statement not covered">  this.name = name</span>
-<span class="cstat-no" title="statement not covered">  this.pass = pass</span>
+<span class="fstat-no" title="function not covered" >function Credentials (name, pass) {</span>
+<span class="cstat-no" title="statement not covered" >  this.name = name</span>
+<span class="cstat-no" title="statement not covered" >  this.pass = pass</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 19:10:40 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 09:35:39 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
