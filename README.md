@@ -1,6 +1,6 @@
 # npmtest-basic-auth
 
-#### test coverage for  [basic-auth (v1.1.0)](https://github.com/jshttp/basic-auth)  [![npm package](https://img.shields.io/npm/v/npmtest-basic-auth.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-basic-auth) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-basic-auth.svg)](https://travis-ci.org/npmtest/node-npmtest-basic-auth)
+#### basic test coverage for  [basic-auth (v1.1.0)](https://github.com/jshttp/basic-auth)  [![npm package](https://img.shields.io/npm/v/npmtest-basic-auth.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-basic-auth) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-basic-auth.svg)](https://travis-ci.org/npmtest/node-npmtest-basic-auth)
 
 #### node.js basic auth parser
 
